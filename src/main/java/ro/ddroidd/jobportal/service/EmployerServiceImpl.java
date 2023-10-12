@@ -38,41 +38,4 @@ public class EmployerServiceImpl implements EmployerService {
     return jobListingConverter.toJobListingListResponseDto(employer.getJobs());
   }
 
-  //    public void create(EmployerRequestDto employerRequestDto) {
-  //
-  //        if (employerExists(employerRequestDto.getName())) {
-  //            throw new RuntimeException("Employer already exists!");
-  //        }
-  //
-  //        EmployerEntity employerEntity = EmployerEntity.builder()
-  //                .name(employerRequestDto.getName())
-  //                .build();
-  //
-  //        employerRepository.save(employerEntity);
-  //    }
-  //
-  //    private boolean employerExists(String name) {
-  //        return employerRepository.findByName(name).isPresent();
-  //    }
-  //
-  //    public List<EmployerResponseDto> getAll(List<EmployerEntity> employerEntityList) {
-  //        List<EmployerResponseDto> employerDtoList = new ArrayList<>();
-  //        for (EmployerEntity employerEntity : employerEntityList) {
-  //            EmployerResponseDto employerDto = EmployerResponseDto.builder()
-  //                    .id(employerEntity.getId())
-  //                    .name(employerEntity.getName())
-  //                    .build();
-  //            employerDtoList.add(employerDto);
-  //        }
-  //        return employerDtoList;
-  //    }
-  //
-  //    public void addJobListing(List<EmployerEntity> employerEntityList) {
-  //
-  //        for (EmployerEntity employerEntity:employerEntityList) {
-  //            JobListingEntity jobListing = jobListingService.create(new JobListingRequestDto());
-  //            employerEntity.getJobs().add(jobListing);
-  //        }
-  //
-  //    }
 }

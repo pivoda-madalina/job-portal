@@ -11,6 +11,6 @@ import java.util.UUID;
 public interface JobListingRepository extends JpaRepository<JobListingEntity, UUID> {
     List<JobListingEntity> findByTitle(String title);
 
-//    @Query("SELECT i FROM job i JOIN i.employer e WHERE e.id=:employerId")
-//    List<JobListingEntity> getAllJobsByEmployer(@Param("employerId") UUID employerId);
+    @Query("SELECT i FROM job i JOIN i.employer e WHERE e.id=:employerId")
+    List<JobListingEntity> getAllJobsByEmployer(@Param("employerId") UUID employerId);
 }
